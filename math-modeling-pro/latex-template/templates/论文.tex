@@ -1,0 +1,85 @@
+\PassOptionsToPackage{quiet}{xeCJK}
+\documentclass[withoutpreface,bwprint]{format}
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{tabular}{\zihao{-5}}
+% 参考文献改用纯tex格式，不再需要natbib+bibtex
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{url}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{fvextra}
+\usepackage{placeins}
+\usepackage{needspace}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\renewcommand{\textbf}[1]{{\song\bfseries #1}}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{
+  box/.style={rectangle, draw, minimum width=3.2cm, minimum height=0.9cm, align=center},
+  arrow/.style={thick, -{Stealth}}
+}
+
+
+
+
+
+
+
+
+
+\title{论文标题}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文
+\begin{document}
+
+\setcounter{page}{1}
+\pagestyle{plain}
+
+% 标题
+{\centering\zihao{3}\song\bfseries 论文标题\par}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 章节骨架说明（示例结构，非官方要求）
+%% 官方未规定正文章节划分；本骨架仅为起点，必须按题重组：
+%% 1. 各章节可按需合并或删除——检验内容可并入各问题求解节，
+%%    无推广价值时删除"8.模型改进推广"，禁止为凑齐骨架保留空章节；
+%% 2. "5.模型的建立与求解.tex" 按实际问题数量重组为问题一/二/三……，
+%%    不固定 5.1.x 子文件划分；
+%% 3. 章节取舍依据见 references/paper-guides/cumcm-guide.md"推荐结构"一节。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{0.摘要.tex}
+
+\input{1.引言.tex}
+
+\input{2.总体分析.tex}
+
+\input{3.模型假设.tex}
+
+\input{4.符号说明.tex}
+
+\input{5.模型的建立与求解.tex}
+
+\input{6.模型检验.tex}
+
+\input{7.模型评价.tex}
+
+\input{8.模型改进推广.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 参考文献
+\input{9.参考文献.tex}
+
+
+\input{10.附录.tex}
+
+
+\end{document}

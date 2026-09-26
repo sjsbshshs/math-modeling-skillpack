@@ -1,0 +1,30 @@
+
+\makeatletter
+\let\@oldaddcontentsline\addcontentsline
+\renewcommand{\addcontentsline}[3]{}
+\section*{附录}
+\let\addcontentsline\@oldaddcontentsline
+\makeatother
+
+\begin{table}[H]
+  \centering
+  \caption{附件说明表}
+  \label{tab:appendix}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabularx}{\textwidth}{LX}
+    \toprule
+    文件 & 说明 \\
+    \midrule
+    问题一\_xxx.py & 问题1求解代码 \\
+    xxx.png & xxx图 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection*{附录2 源程序代码}
+
+%（官方格式规范第五条要求）此处粘贴本次建模用到的全部完整、可运行的源程序代码。
+%（每个问题的求解脚本从 import 到输出完整粘贴，含 mrite_runtime.py；若确实没有用到
+%程序，改为注明“本论文没有用到程序”）。
+%支撑材料（含源程序、自主查阅的数据资料、较大篇幅中间结果图表）压缩为RAR/ZIP
+%单独上传，大小不超过20MB，文件列表已在上表列出。

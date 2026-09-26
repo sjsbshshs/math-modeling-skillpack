@@ -1,0 +1,13 @@
+# AI 会话 / 客户端在本目录工作时可能生成的本地文件，禁止入库
+.workbuddy/
+.zcode/
+workflow-stages/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
